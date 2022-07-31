@@ -1,0 +1,130 @@
+body {
+    font-family: 'Outfit', sans-serif; /* definindo a fonte do google fonts */
+    background-image: url(../imagens/fundo-site.png); /* carregando a imagem do fundo */
+    background-repeat: no-repeat; /*colocando o fundo pra não repitir */
+    background-size: cover; /* colocando o tamanho do fundo completando a tela */
+    min-height: 100vh; /* colocando o site pra usar 100% na vertical */
+}
+
+header {
+    display: flex;
+    justify-content: center; /*colocando os elementos no centro */
+    align-items: center;
+    gap: 15px;
+    padding-top: 50px; /* Afastando o header do topo da pagina */
+    color: white;    
+}
+
+main { /* todo o main e sliders */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 60px;
+    
+        
+}
+
+ul { /* Lista de pokemons */
+    display: flex;
+    width: 310px;
+    height: 520px;
+    position: relative;    
+}
+
+.cartao { /* cartões ocultos */
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /*completa o espaço do cartão dando um espaço entre eles */
+    position: absolute;
+    border-radius: 10px;
+    padding: 12px; /* afastando os elementos da bordas */
+    transition: opacity 0.3s ease-in;
+}
+
+.selecionado { /* cartão selecionado fica visivel */
+    opacity: 1;
+    z-index: 1; /* pra mudar a carta na vertical */
+}
+
+.btn-seta { /* todos os botões de seta */
+    width: 70px;
+    height: 70px;
+    border-radius: 50px; /* deixando a seta redonda */
+    border: 0; /*tirando a borda preta da seta */
+    cursor: pointer;
+}
+
+.btn-voltar {
+    transform: rotateY(180deg); /* mudando o sentido da seta */
+}
+
+.btn-seta:hover { /* mudando a cor da seta ao por o mouse em cima */
+    background-color: aquamarine;
+
+}
+
+.cartao .informacoes {
+    background-color: rgba(179, 177, 185, 0.7); /* Fundo das informações, com cor e opacidade */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    padding: 8px 10px; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.nome {
+    color: white;
+    font-size: 22px;
+}
+.vida {
+    background-color: #333;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+#cartao1 { /* Colocando as imagens de fundo dos cartões */
+    background-image: url(../imagens/fundo-card-1.jpg);
+    background-repeat: no-repeat;    
+}
+#cartao2 {
+    background-image: url(../imagens/fundo-card-2.jpg);
+    background-repeat: no-repeat;     
+}
+#cartao3 {
+    background-image: url(../imagens/fundo-card-3.jpg);
+    background-repeat: no-repeat;     
+}
+
+.container-imagem {
+    text-align: center;
+}
+.imagem-pokemon {
+    max-width: 100%;
+    max-height: 280px;
+    padding: 20px;
+}
+
+.descricao {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.titulo {
+    background-color: #333;
+    color: white;
+    font-size: 15px;
+    padding: 12px;
+}
+
+.texto {
+    font-size: 14px;
+    padding: 12px;
+    text-align: justify;
+    max-height: 115px;
+    overflow: auto;
+}       

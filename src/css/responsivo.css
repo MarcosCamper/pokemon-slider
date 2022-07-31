@@ -1,0 +1,19 @@
+@media(max-width: 620px) {
+    main {
+        padding: 0 15px;
+        display: flex;
+        margin: 0;
+        gap: 15px;
+    }
+    header {
+        padding: 20px;
+    }
+    .imagem-pokemon {
+        max-height: 230px;
+        padding: 5px;
+
+    }
+    .btn-seta {
+        background-color: white;
+    }
+} 
